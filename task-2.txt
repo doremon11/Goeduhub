@@ -1,0 +1,139 @@
+                                                                        Assignment/Task 2
+1.Is a list mutable? 
+  Yes,list is mutable.
+  
+2. Does a list need to be homogeneous?
+  List can contain heterogeneous values such as integers, floats, strings, tuples, lists, and dictionaries but they are commonly used to store collections of homogeneous objects
+  
+3. What is the difference between a list and a tuple.
+  Tuple is also a sequence data type that can contain elements of different data types, but these are immutable in nature.Where as list is mutable.
+  
+4.How to find the number of elements in the list?
+  By using len() funtion we can find Number of elements in the list.
+  Syntax: len(list_name)
+
+5.How to check whether the list is empty or not?
+  if len(list_name)==0:
+      print('list is empty')
+  else:
+      print('list is not empty')
+6.How to find the first and last element of the list?
+  By using indexing we can find first and last elements of list.
+  first element - list_name[0]
+  last element  - list_name[-1]
+  
+7.How to find the largest and lowest value in the list?
+  By using min(),max() we can find lowest and largest elements of a list.
+  lowest element - min(list_name)
+  largest element  - max(list_name)
+  
+8.How to access elements of the list?
+  By using indexing we can access the elements in list.
+  ex: l=[1,2,3,4]
+      print(l[0])
+      output: 1
+   
+9.Remove elements in a list before a specific index
+  del[a : b] : This method deletes all the elements in range starting from index 'a' till 'b' mentioned in arguments.
+
+10.Remove elements in a list between 2 indices
+   a = [1,2,3,4,5,6]
+   del a[::2]
+   print(a)
+
+11.Return every 2nd element in a list between 2 indices
+   list_1=[1,2,3,4,5]
+   print(list_1[::2])
+12.Get the first element from each nested list in a list
+   def Extract(lst)
+       return [item[0] for item in lst]
+   lst = [[1, 2], [3, 4, 5], [6, 7, 8, 9]] print(Extract(lst))
+13.How to modify elements of the list?
+   By using assignment operator'=' we can modify elements in list.
+
+14.How to concatenate two lists?
+   By using '+' operator we can concatenate two lists.
+   
+15.How to add two lists element-wise in python?
+   list_1 = [1, 2, 3]
+   list_2 = [4, 5, 6]    
+   sum = []
+   for (a,b) in zip(list1,list2):
+        sum.append(a+b)
+   print(sum)
+16.Difference between del and clear?
+   To remove items by index or slice we can use the del method in python .you can also remove elements from a list with del statements.   del list_name[index] or del list
+clear() method in python is used to empty the entire list. this can be used if someone wants an empty list for any other purpose.  list_name.clear()
+
+17.Difference between remove and pop?
+   remove() delete the matching element/object whereas del and pop removes the element at a specific index. del and pop deals with the index.
+   The only difference between the two is that- pop return deleted the value from the list and del does not return anything. Pop is the only way that returns the object
+   
+18. Difference between append and extend?
+    append() adds a single element to the end of the list while . extend() can add multiple individual elements to the end of the list.
+    
+19.Difference between indexing and Slicing?
+    Indexing: Indexing is used to obtain individual elements. Slicing: Slicing is used to obtain a sequence of elements.
+    Indexing and Slicing can be be done in Python Sequences types like list, string, tuple, range objects.
+    
+20.Difference between sort and sorted?
+    sort() function is very similar to sorted() but unlike sorted it returns nothing and makes changes to the original sequence.
+    Moreover, sort() is a method of list class and can only be used with lists.
+    sorted() method sorts the given sequence either in ascending order or in descending order and always return the a sorted list.
+    This method doesnot effect the original sequence.
+    
+21.Difference between reverse and reversed?
+   reverse() actually reverses the elements in the container. reversed() doesn't actually reverse anything, it merely returns an object
+   that can be used to iterate over the container's elements in reverse order. 
+   
+22.Difference between copy and deepcopy?
+    A shallow copy constructs a new compound object and then inserts references into it to the objects found in the original.
+    A deep copy constructs a new compound object and then, recursively, inserts copies into it of the objects found in the original.
+23.How to remove duplicate elements in the list?
+   list_name=[1,1,2,2,3,3,4,4]
+   s=set(list_name)
+   print(s)
+24.How to find an index of an element in the python list?
+   By using index()funtion
+   list_name.index(element)
+25.How to find the occurrences of an element in the python list?
+   By using count()funtion
+   list_name.count(element)
+26.How to insert an item at a given position?
+    insert() method inserts the specified value at the specified position.
+    fruits = ['apple', 'banana', 'cherry']
+    fruits.insert(1, "orange")
+27.How to check if an item is in the list?
+    l=[1,2,3,4,5]
+    for i in l:
+      if i==3:
+         print('item is in the list')
+      else:
+         print('item not in the list')
+         
+28.How to flatten a list in python?
+   # initializing the data and an empty list
+  data = [[1, 2, 3], [4, 5], [6, 7, 8, 9, 10]]
+  flat_list = []
+  # iterating over the data
+  for item in data:
+     # appending elements to the flat_list
+      flat_list += item
+   # printing the resultantn flat_list
+   print(flat_list)
+
+29.How to convert python list to other data structures like set, tuple, dictionary?
+   typecasting to tuple can be done by using simply tuple(list_name)
+   First create an iterator, and initialize it to variable ‘it’. Then use zip method, to zip keys and values together. Finally typecast it to dict type. 
+30.How to apply a function to all items in the list?
+  using map() meathod we can apply a funtion to all the elements in the list.
+  
+31.How to filter the elements based on a function in a python list?
+   Python has a built-in function called filter() that allows you to filter a list (or a tuple) in a more beautiful way. 
+   The filter() function iterates over the elements of the list and applies the fn() function to each element.
+   It returns an iterator for the elements where the fn() returns True .
+
+32.How python lists are stored in memory?
+   Instead of storing values in the memory space reserved by the variable, Python has the variable refer to the value. 
+   Similar to pointers in C, variables in Python refer to values (or objects) stored somewhere in memory.
+   Python keeps an internal counter on how many references an object has.
